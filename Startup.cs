@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using WebApiTeste.Repositories;
 
 namespace WebApiTeste
 {
@@ -18,6 +19,9 @@ namespace WebApiTeste
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc(option => option.EnableEndpointRouting = false);
+
+            //Injetar dependencias 
+            services.AddSingleton<IFundoCapitalRepository , FundoCapitalRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

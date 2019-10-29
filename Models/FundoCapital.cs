@@ -1,6 +1,6 @@
 using System;
 
-namespace WebApiTeste.Models.FundoCapital
+namespace WebApiTeste.Models
 {
 
     public class FundoCapital
